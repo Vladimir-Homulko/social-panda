@@ -5,9 +5,11 @@ import Profile from "./componets/Profile";
 
 const App = () => {
   return (
-    <div className="app-wrapper">
+    <div >
       <Header />
-      <Profile />
+      <div className='wrapper'>
+        <Profile />
+      </div>
       <Footer />
     </div>
   );

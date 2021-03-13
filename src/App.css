@@ -1,4 +1,10 @@
-.app-wrapper {
+@import url('https://fonts.googleapis.com');
+
+.app {
+    font-family: 'Open sans', sans-serif;
+}
+
+.wrapper {
     width: 1200px;
     max-width: 100%;
     padding: 20px;
@@ -8,31 +14,4 @@
 img {
     max-width: 100%;
     height: auto;
-}
-
-.header__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.logo {
-    width: 150px;
-    margin-right: 0;
-}
-
-.nav ul {
-    margin: 1em 0 .5em;
-    align-items: center;
-}
-
-.nav li {
-    display: inline;
-}
-
-.nav a {
-	display: inline-block;
-	padding: .5em 1.5em;
-    text-decoration: none;
 }
