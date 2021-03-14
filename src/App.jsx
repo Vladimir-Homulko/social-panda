@@ -1,14 +1,16 @@
 import "./App.css";
-import Footer from "./componets/Footer";
-import Header from "./componets/Header";
-import Profile from "./componets/Profile";
+import Footer from "./componets/Footer/Footer";
+import Header from "./componets/Header/Header";
+import Profile from "./componets/Profile/Profile";
 
 const App = () => {
   return (
-    <div >
+    <div>
       <Header />
-      <div className='wrapper'>
-        <Profile />
+      <div className='container'>
+        <div className='wrapper'>
+          <Profile />
+        </div>
       </div>
       <Footer />
     </div>
