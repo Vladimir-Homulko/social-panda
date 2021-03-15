@@ -5,7 +5,9 @@ const PostInput = () => {
         <div className={ s.input }>
             <h2>My Posts</h2>
             <textarea placeholder='your news...'></textarea>
-            <button>Send</button>
+            <div className={ s.btn }>
+                <button>Send</button>
+            </div>
         </div>
     );
 }

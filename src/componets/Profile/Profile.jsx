@@ -9,9 +9,9 @@ const Profile = () => {
         <div className={ s.profile }>
           <Information />
           <PostInput />
-          <Post />
-          <Post />
-          <Post />
+          <Post message="How are you?" />
+          <Post message="This is my first post)" />
+          <Post message="This is my second post!" />
         </div>
       </main>
     );

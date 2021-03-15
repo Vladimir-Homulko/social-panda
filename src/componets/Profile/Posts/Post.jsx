@@ -1,11 +1,13 @@
 import Avatar from '../Information/Avatar/Avatar';
+import Like from '../Like/Like';
 import s from './Post.module.css';
 
-const Post = () => {
+const Post = (props) => {
     return(
         <div className={ s.post }>
             <Avatar />
-            <p>My post text</p><span>like</span>
+            <p>{ props.message }</p>
+            <Like count='20'/>
         </div>
     );
 }
