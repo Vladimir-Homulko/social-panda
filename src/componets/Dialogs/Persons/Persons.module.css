@@ -1,0 +1,39 @@
+.title {
+    margin-left: 40px;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 100px;
+}
+
+.link {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.link img {
+    max-width: 60px;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.links a {
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(51, 46, 46);
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.links a:hover, .links a:focus, .links a:active {
+    opacity: 0.75;
+}
+
+.links span {
+    font-size: 50px;
+    padding-right: 20px;
+}
