@@ -2,35 +2,42 @@ import { NavLink } from 'react-router-dom';
 import Avatar from '../../Profile/Information/Avatar/Avatar';
 import s from './Persons.module.css';
 
-const Persons = () => {
+
+const Person = (props) => {
+
+    let path = `/dialogs/${props.id}`;
+    let name = props.name;
+
+    return (
+        <div className={ s.link }>
+            <Avatar />
+            <NavLink to={ path }>{ name }</NavLink>
+        </div>
+    );
+}
+
+
+const Persons = (props) => {
+
+    let personsData = [
+        {id: 1, name: 'Vova'},
+        {id: 2, name: 'Valera'},
+        {id: 3, name: 'Maks'},
+        {id: 4, name: 'Lexa'},
+        {id: 5, name: 'Andrey'},
+        {id: 6, name: 'Djodji'}
+    ];
+
     return(
         <div className={ s.container }>
             <h1 className={ s.title }>Dialogs</h1>
             <div className={ s.links }>
-                <div className={ s.link }>
-                    <Avatar />
-                    <NavLink to='1'>Vova</NavLink>
-                </div>
-                <div className={ s.link }>
-                    <Avatar />
-                    <NavLink to='2'>Valera</NavLink>
-                </div>
-                <div className={ s.link }>
-                    <Avatar />
-                    <NavLink to='3'>Maks</NavLink>
-                </div>
-                <div className={ s.link }>
-                    <Avatar />
-                    <NavLink to='4'>Lexa</NavLink>
-                </div>
-                <div className={ s.link }>
-                    <Avatar />
-                    <NavLink to='5'>Andrey</NavLink>
-                </div>
-                <div className={ s.link }>
-                    <Avatar />
-                    <NavLink to='6'>Djodji</NavLink>
-                </div>
+                <Person name={personsData[0].name} id={personsData[0].id} />
+                <Person name={personsData[1].name} id={personsData[1].id} />
+                <Person name={personsData[2].name} id={personsData[2].id} />
+                <Person name={personsData[3].name} id={personsData[3].id} />
+                <Person name={personsData[4].name} id={personsData[4].id} />
+                <Person name={personsData[5].name} id={personsData[5].id} />
             </div>
         </div>
     ); 

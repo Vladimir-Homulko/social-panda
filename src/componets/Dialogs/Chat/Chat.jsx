@@ -1,28 +1,44 @@
 import Avatar from '../../Profile/Information/Avatar/Avatar';
 import s from './Chat.module.css';
 
+const Text = (props) => {
+    let message = props.message;
+
+    return(
+        <p>{ message }</p>
+    );
+}
+
+const Time = (props) => {
+    let time = props.time;
+
+    return(
+        <span>{ time }</span>
+    );
+}
+
 const Chat = () => {
     return(
         <div className={ s.wrapper }>
             <div className={ s.container }>
                 <Avatar />
-                <p>Hello. How are you today?</p>
-                <span className={ s.time_right }>11:00</span>
+                <Text message='Hello. How are you today?' />
+                <Time time='11:00'/>
             </div>
-            <div className={ `${ s.container } ${ s.darker }` }>
+            <div className={ s.container_dark }>
                 <Avatar className={ s.right } />
-                <p>Hey! I'm fine. Thanks for asking!</p>
-                <span className={ s.time_left }>11:01</span>
+                <Text message='Hey! I am fine. Thanks for asking!' />
+                <Time time='11:01'/>
             </div>
             <div className={ s.container }>
                 <Avatar />
-                <p>Sweet! So, what do you wanna do today?</p>
-                <span className={ s.time_right }>11:02</span>
+                <Text message='Sweet! So, what do you wanna do today?' />
+                <Time time='11:03'/>
             </div>
-            <div className={ `${ s.container } ${ s.darker }` }>
-                <Avatar className={ s.right } />
-                <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
-                <span class={ s.time_left }>11:05</span>
+            <div className={ s.container_dark }>
+                <Avatar />
+                <Text message='Nah, I dunno. Play soccer.. or learn more coding perhaps?' />
+                <Time time='11:05'/>
             </div>
         </div>
     );
