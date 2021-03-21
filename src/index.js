@@ -4,9 +4,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+let posts = [
+  {id: 1, message: "How are you?", likesCount: 12},
+  {id: 2, message: "This is my first post)", likesCount: 10},
+  {id: 3, message: "This is my second post!", likesCount:22}
+];
+
+let persons = [
+  {id: 1, name: 'Vova'},
+  {id: 2, name: 'Valera'},
+  {id: 3, name: 'Maks'},
+  {id: 4, name: 'Lexa'},
+  {id: 5, name: 'Andrey'},
+  {id: 6, name: 'Djodji'}
+];
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App posts={ posts } persons={ persons } />
   </React.StrictMode>,
   document.getElementById('root')
 );
@@ -15,3 +30,4 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+

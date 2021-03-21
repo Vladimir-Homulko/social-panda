@@ -18,26 +18,13 @@ const Person = (props) => {
 
 
 const Persons = (props) => {
-
-    let personsData = [
-        {id: 1, name: 'Vova'},
-        {id: 2, name: 'Valera'},
-        {id: 3, name: 'Maks'},
-        {id: 4, name: 'Lexa'},
-        {id: 5, name: 'Andrey'},
-        {id: 6, name: 'Djodji'}
-    ];
+    let personsEl = props.persons.map( person => <Person name={person.name} id={person.id} />);
 
     return(
         <div className={ s.container }>
             <h1 className={ s.title }>Dialogs</h1>
             <div className={ s.links }>
-                <Person name={personsData[0].name} id={personsData[0].id} />
-                <Person name={personsData[1].name} id={personsData[1].id} />
-                <Person name={personsData[2].name} id={personsData[2].id} />
-                <Person name={personsData[3].name} id={personsData[3].id} />
-                <Person name={personsData[4].name} id={personsData[4].id} />
-                <Person name={personsData[5].name} id={personsData[5].id} />
+                { personsEl }
             </div>
         </div>
     ); 

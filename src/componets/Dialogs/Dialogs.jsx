@@ -2,10 +2,10 @@ import Chat from './Chat/Chat';
 import s from './Dialogs.module.css';
 import Persons from './Persons/Persons';
 
-const Dialogs = () => {
+const Dialogs = (props) => {
     return(
         <div className={ s.container }>
-            <Persons />
+            <Persons persons={ props.persons } />
             <Chat />
         </div>
     );

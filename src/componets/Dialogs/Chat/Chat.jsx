@@ -1,6 +1,9 @@
 import Avatar from '../../Profile/Information/Avatar/Avatar';
 import s from './Chat.module.css';
 
+// TODO: create data elements
+// TODO: create chat architecture 
+
 const Text = (props) => {
     let message = props.message;
 

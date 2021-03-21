@@ -8,18 +8,18 @@ import News from "./componets/News/News";
 import Profile from "./componets/Profile/Profile";
 import Settings from "./componets/Settings/Settings";
 
-const App = () => {
+const App = (props) => {
   return (
     <div>
       <BrowserRouter>
         <Header />
         <div className='container'>
           <div className='wrapper'>
-            <Route path='/profile' component={ Profile } />
-            <Route path='/dialogs' component={ Dialogs } />
-            <Route path='/news' component={ News } />
-            <Route path='/music' component={ Music } />
-            <Route path='/settings' component={ Settings } />
+            <Route path='/profile' render={ () => <Profile posts={ props.posts } /> } />
+            <Route path='/dialogs' render={ () => <Dialogs persons={ props.persons } /> } />
+            <Route path='/news' render={ () => <News /> } />
+            <Route path='/music' render={ () => <Music /> } />
+            <Route path='/settings' render={ () => <Settings /> } />
           </div>
         </div>
         <Footer />

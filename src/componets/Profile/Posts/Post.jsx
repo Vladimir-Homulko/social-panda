@@ -7,7 +7,7 @@ const Post = (props) => {
         <div className={ s.post }>
             <Avatar />
             <p>{ props.message }</p>
-            <Like count='20'/>
+            <Like likesCount={props.likesCount}/>
         </div>
     );
 }
