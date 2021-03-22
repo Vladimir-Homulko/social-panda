@@ -6,7 +6,7 @@ const Dialogs = (props) => {
     return(
         <div className={ s.container }>
             <Persons persons={ props.persons } />
-            <Chat />
+            <Chat messages={ props.messages } />
         </div>
     );
 }

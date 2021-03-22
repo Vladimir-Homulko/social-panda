@@ -16,7 +16,7 @@ const App = (props) => {
         <div className='container'>
           <div className='wrapper'>
             <Route path='/profile' render={ () => <Profile posts={ props.posts } /> } />
-            <Route path='/dialogs' render={ () => <Dialogs persons={ props.persons } /> } />
+            <Route path='/dialogs' render={ () => <Dialogs persons={ props.persons } messages={ props.messages } /> } />
             <Route path='/news' render={ () => <News /> } />
             <Route path='/music' render={ () => <Music /> } />
             <Route path='/settings' render={ () => <Settings /> } />

@@ -19,9 +19,16 @@ let persons = [
   {id: 6, name: 'Djodji'}
 ];
 
+let messages = [
+  {id: 1, message: 'Hello. How are you today?', time: '11:01', new: true},
+  {id: 2, message: 'Hey! I am fine. Thanks for asking!', time: '11:01', new: false},
+  {id: 3, message: 'Sweet! So, what do you wanna do today?', time: '11:03', new: true},
+  {id: 4, message: 'Nah, I dunno. Play soccer.. or learn more coding perhaps?', time: '11:05', new: false}
+];
+
 ReactDOM.render(
   <React.StrictMode>
-    <App posts={ posts } persons={ persons } />
+    <App posts={ posts } persons={ persons } messages={ messages } />
   </React.StrictMode>,
   document.getElementById('root')
 );
