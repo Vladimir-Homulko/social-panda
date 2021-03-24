@@ -1,4 +1,4 @@
-import Information from './Information/Information';
+import Information from './Info/Information';
 import Post from './Posts/Post';
 import PostInput from './Posts/PostInput';
 import s from './Profile.module.css';

@@ -1,5 +1,5 @@
-import Avatar from '../Information/Avatar/Avatar';
-import Like from '../Like/Like';
+import Avatar from '../Info/Avatar/Avatar';
+import Like from '../Likes/Like';
 import s from './Post.module.css';
 
 const Post = (props) => {

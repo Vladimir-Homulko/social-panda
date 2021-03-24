@@ -1,4 +1,4 @@
-import Avatar from './../../../../Profile/Information/Avatar/Avatar';
+import Avatar from '../../../../Profile/Info/Avatar/Avatar';
 import Text from './../Text';
 import Time from './../Time';
 import s from './../../Chat.module.css';

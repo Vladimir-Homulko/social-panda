@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import Avatar from '../../Profile/Information/Avatar/Avatar';
+import Avatar from '../../Profile/Info/Avatar/Avatar';
 import s from './Persons.module.css';
 
 
