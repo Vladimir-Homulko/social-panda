@@ -1,5 +1,7 @@
 import s from './Avatar.module.css'
 
+//TODO: up to tree level
+
 const Avatar = () => {
     return(
         <img className={ s.avatar }

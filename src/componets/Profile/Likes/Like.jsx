@@ -1,8 +1,13 @@
 import s from './Like.module.css';
 
+// TODO: create like animation
+
 const Like = (props) => {
     return(
-        <div className={ s.like }>like { props.likesCount }</div>
+        <div className={ s.like }>
+            <img src='https://bfbsk.ru/wp-content/uploads/2019/03/like-icon.png' />
+            <span>{ props.likesCount }</span>
+        </div>
     );
 }
 

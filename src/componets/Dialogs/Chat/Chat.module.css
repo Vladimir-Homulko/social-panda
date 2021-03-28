@@ -1,10 +1,22 @@
 .wrapper {
-    width: 60%;
+    width: 65%;
     margin-top: 70px;
 }
 
 /* Chat containers */
+
+.container_wrapper {
+    position: relative;
+}
+
+.container_wrapper::after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
 .container {
+    width: 45%;
     border: 2px solid #dedede;
     background-color: #f1f1f1;
     border-radius: 5px;
@@ -14,6 +26,8 @@
 
 /* Darker chat container */
 .container_dark {
+    float: right;
+    width: 45%;
     border: 2px solid;
     border-color: #ccc;
     background-color: #ddd;

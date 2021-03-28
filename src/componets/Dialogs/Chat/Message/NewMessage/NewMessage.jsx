@@ -9,7 +9,7 @@ const NewMessage = (props) => {
                 <Avatar />
                 <Text message={props.message}/>
                 <Time time={props.time}/>
-            </div>
+        </div>
     );
 }
 

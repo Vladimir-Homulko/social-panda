@@ -1,8 +1,7 @@
 import s from './Chat.module.css';
 import SendMessage from './Message/SendMessage/SendMessage';
 import NewMessage from './Message/NewMessage/NewMessage';
-
-// TODO: create data elements
+import InputMessage from './Message/InputMessage/InputMessage';
 
 const Chat = (props) => { 
     let elMessage = props.messages.map(message => message.new == true ?
@@ -13,6 +12,7 @@ const Chat = (props) => {
     return(
         <div className={ s.wrapper }>
             { elMessage }
+            <InputMessage />
         </div>
     );
 }

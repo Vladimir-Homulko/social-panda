@@ -4,13 +4,16 @@ import PostInput from './Posts/PostInput';
 import s from './Profile.module.css';
 
 const Profile = (props) => {
-    let postEl = props.posts.map(post => <Post id={post.id} message={post.message} likesCount={post.likesCount} />);
+    let postEl = props.posts.map(post => <Post id={post.id} message={post.message} likesCount={post.likesCount}/>);
 
     return(
         <main>
         <div className={ s.profile }>
           <Information />
-          <PostInput />
+          <PostInput addPost={ props.addPost } 
+                     newPostText={ props.newPostText }
+                     updateNewPostText={ props.updateNewPostText } 
+          />
           { postEl }
         </div>
       </main>

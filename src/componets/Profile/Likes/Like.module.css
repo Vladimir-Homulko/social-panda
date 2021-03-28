@@ -1,0 +1,9 @@
+.like img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.like span {
+    color: rgb(78, 139, 16);
+}
