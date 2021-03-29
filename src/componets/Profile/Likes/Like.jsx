@@ -1,7 +1,5 @@
 import s from './Like.module.css';
 
-// TODO: create like animation
-
 const Like = (props) => {
     return(
         <div className={ s.like }>
