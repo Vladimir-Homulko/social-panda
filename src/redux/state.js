@@ -1,5 +1,7 @@
 const ADD_POST = "ADD-POST";
 const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
+const SEND_MESSAGE = 'SEND-MESSAGE';
+const UPDATE_SEND_MESSAGE_TEXT = 'UPDATE-SEND-MESSAGE-TEXT';
 
 let store = {
   _state: {
@@ -25,27 +27,28 @@ let store = {
           id: 1,
           message: "Hello. How are you today?",
           time: "11:01",
-          new: true,
+          owner: false,
         },
         {
           id: 2,
           message: "Hey! I am fine. Thanks for asking!",
           time: "11:01",
-          new: false,
+          owner: true,
         },
         {
           id: 3,
           message: "Sweet! So, what do you wanna do today?",
           time: "11:03",
-          new: true,
+          owner: false,
         },
         {
           id: 4,
           message: "Nah, I dunno. Play soccer.. or learn more coding perhaps?",
           time: "11:05",
-          new: false,
+          owner: true,
         },
       ],
+      newMessageText: 'Hi!'
     },
   },
 
@@ -63,29 +66,59 @@ let store = {
 
   dispatch(action) {
     if (action.type === ADD_POST) {
-      let newPost = {
-        id: 4,
-        message: this._state.profile.newPostText,
-        likesCount: 43,
-      };
+        let newPost = {
+            id: 4,
+            message: this._state.profile.newPostText,
+            likesCount: 43,
+        };
 
-      this._state.profile.posts.push(newPost);
-      this._state.profile.newPostText = "";
-      this._callSubscriber(this._state);
+        this._state.profile.posts.push(newPost);
+        this._state.profile.newPostText = "";
+        this._callSubscriber(this._state);
+
     } else if (action.type === UPDATE_NEW_POST_TEXT) {
-      this._state.profile.newPostText = action.newText;
-      this._callSubscriber(this._state);
-    }
+        this._state.profile.newPostText = action.newText;
+        this._callSubscriber(this._state);
+
+    } else if (action.type === SEND_MESSAGE) {
+
+        const getCurrTime = () => {
+            let date = new Date();
+            
+            let temp = 0;
+            date.getMinutes() > 9 ?
+            temp = date.getHours() + ':' + date.getMinutes() :
+            temp = date.getHours() + ':0' + date.getMinutes()
+
+            return temp;
+        }
+
+        
+        let currTime =  getCurrTime(); 
+
+        let message = {
+            id: 5,
+            message: this._state.dialogs.newMessageText,
+            time: currTime,
+            owner: true
+        }
+
+        this._state.dialogs.messages.push(message);
+        this._state.dialogs.newMessageText = "";
+        this._callSubscriber(this._state);
+
+    } else if (action.type === UPDATE_SEND_MESSAGE_TEXT) {
+        this._state.dialogs.newMessageText = action.newText;
+        this._callSubscriber(this._state);
+
+    } 
   },
 };
 
-export const addPostActionCreator = () => {
-  return { type: ADD_POST };
-};
-
-export const updateNewPostTextActionCreator = (text) => {
-  return { type: UPDATE_NEW_POST_TEXT, newText: text };
-};
+export const addPostActionCreator = () =>  ({ type: ADD_POST });
+export const updateNewPostTextActionCreator = (text) => ({ type: UPDATE_NEW_POST_TEXT, newText: text });
+export const sendMessageActionCreator = () => ({ type: SEND_MESSAGE });
+export const updateSendMessageTextActionCreator = (text) => ({ type: UPDATE_SEND_MESSAGE_TEXT, newText: text })
 
 window.store = store;
 export default store;
