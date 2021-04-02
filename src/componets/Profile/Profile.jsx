@@ -10,9 +10,8 @@ const Profile = (props) => {
         <main>
         <div className={ s.profile }>
           <Information />
-          <PostInput addPost={ props.addPost } 
-                     newPostText={ props.newPostText }
-                     updateNewPostText={ props.updateNewPostText } 
+          <PostInput dispatch={ props.dispatch } 
+                     newPostText={ props.newPostText } 
           />
           { postEl }
         </div>
