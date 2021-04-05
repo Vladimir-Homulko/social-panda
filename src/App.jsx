@@ -16,17 +16,17 @@ const App = (props) => {
         <div className='container'>
           <div className='wrapper'>
             <Route path='/profile' 
-                   render={ () => <Profile posts={ props.state.profile.posts }
+                   render={ () => <Profile posts={ props.state.profileReduser.posts }
                                            dispatch={ props.dispatch }
-                                           newPostText={ props.state.profile.newPostText }
+                                           newPostText={ props.state.profileReduser.newPostText }
                                   /> 
                           }
             />
             <Route path='/dialogs' 
-                   render={ () => <Dialogs persons={ props.state.dialogs.persons } 
-                                           messages={ props.state.dialogs.messages } 
+                   render={ () => <Dialogs persons={ props.state.dialogsReduser.persons } 
+                                           messages={ props.state.dialogsReduser.messages } 
                                            dispatch={ props.dispatch }
-                                           newMessageText={ props.state.dialogs.newMessageText }
+                                           newMessageText={ props.state.dialogsReduser.newMessageText }
                                   />
                           } 
             />
