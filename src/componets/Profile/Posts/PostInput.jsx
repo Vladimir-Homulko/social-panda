@@ -29,7 +29,7 @@ const PostInput = (props) => {
             </div>
         </div>
     );
-}
+}  
 
 
 export default PostInput;
